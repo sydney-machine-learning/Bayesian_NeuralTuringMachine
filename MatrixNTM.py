@@ -16,12 +16,12 @@ class MatNTM(torch.nn.Module):
         """
         Matrix Neural Turing Machine.
         
-        Here, the memory is a 3D structure with linear slots holding matrix representations.
+        Here, the memory is a 3-orthotope with linear slots holding matrix representations.
         
         shift_range : (integer) the size of shift field.
-                    if shift_range = 1 and T = 2, then head would shift left or right
-                    if shift_range = 1 and T = 3, then head would shift left, right, top, bottom and diagonally.
-                    and so on for shift_range = 2,3 ....
+                    if shift_range = 1, then head would shift left or right one step.
+                    if shift_range = 2, then head would shift left, right, two steps.
+                    and so on for shift_range = 3,4 ...
         """
         super().__init__()
         
