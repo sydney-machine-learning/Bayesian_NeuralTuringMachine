@@ -1,0 +1,21 @@
+SEED : 6934
+NUM_EPOCHS = 200000
+
+ITEM_SIZE = 2 #Size of the group which you would like to call "1 Item".
+
+BATCH_SIZE = 16
+INPUT_DIMS  = [5,5]
+HIDDEN_DIMS = [[20,20],[20,20],[20,20],[20,20]]  #Please keep all layers of same size, different sized layers would be supported tomorrow!!
+OUTPUT_DIMS = [5,5]
+NUM_SLOTS = 120
+MEM_SLOT_DIMS = [6,6]
+SR = 1 #Shift Range
+EPS = 1e-9
+
+LR = 8e-5
+
+DEVICE = 'cuda:0' #'None' for CPU 
+
+LOAD_SAVE = False
+
+SAVE_PATH = 'SavedModels/RNNMatNTM_AssRec1/Train5/'
